@@ -1,0 +1,29 @@
+# =============================================================================
+# TRIBE v2 Activation API — dependencias EXCLUSIVAS de la API
+# =============================================================================
+# Aqui va SOLO lo que importa tribe_activation_api.py y que NO instala ya tribev2.
+#
+# Lo que NO va aqui (lo aporta tribev2 segun su pyproject.toml):
+#   * torch>=2.5.1,<2.7 y torchvision>=0.20,<0.22
+#       -> en el Dockerfile se instala la build CUDA (cu126) ANTES que tribev2,
+#          para no acabar con la rueda CPU-only de PyPI.
+#   * numpy==2.2.6  -> tribev2 lo PINEA exacto. Por eso NO lo declaramos aqui:
+#          si pusieramos otro rango podriamos provocar un conflicto. Dejamos
+#          que gane el pin de tribev2.
+#   * transformers, huggingface_hub, einops, moviepy, soundfile, spacy, etc.
+#
+# OJO con scipy: tribev2 solo lo trae en su extra [plotting], NO en el core.
+# La API lo necesita (scipy.interpolate.interp1d), asi que SI lo declaramos.
+#
+# Requiere Python 3.11+ (tribev2 lo exige; la imagen Docker usa 3.12).
+# LLaMA-3.2 es gated en HuggingFace: exporta HF_TOKEN con su licencia aceptada.
+# =============================================================================
+
+# --- Servidor web / API ---
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9        # requerido por FastAPI para File(...) / Form(...)
+pydantic>=2.6,<3               # el codigo asume Pydantic v2
+
+# --- Interpolacion del score (no lo trae el core de tribev2) ---
+scipy>=1.14                    # >=1.14 por compatibilidad con numpy 2.2.x

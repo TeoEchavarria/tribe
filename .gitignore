@@ -1,0 +1,21 @@
+# Secretos — NUNCA commitear
+.env
+*.env
+!.env.example
+
+# Cache de pesos / modelos (50-100 GB)
+cache/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Artefactos / SO
+*.mp4
+*.mov
+*.wav
+.DS_Store

@@ -1,0 +1,25 @@
+# Mantener el contexto de build pequeno
+.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+*.md
+
+# Cache de pesos / modelos (¡nunca meterlos en la imagen!)
+cache/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Artefactos varios
+*.mp4
+*.mov
+*.wav
+.DS_Store
