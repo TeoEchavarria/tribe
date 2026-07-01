@@ -14,8 +14,3 @@ __pycache__/
 .venv/
 venv/
 
-# Artefactos / SO
-*.mp4
-*.mov
-*.wav
-.DS_Store
