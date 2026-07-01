@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRIBE v2 — Ejemplos: video ↔ activación cerebral</title>
+<style>
+  :root{
+    --bg:#0f172a; --card:#ffffff; --ink:#0f172a; --muted:#64748b;
+    --line:#e2e8f0; --accent:#2b6cb0; --peak:#e11d48;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:#f1f5f9; line-height:1.55;
+  }
+  header{
+    background:linear-gradient(135deg,#1e3a8a,#2b6cb0); color:#fff;
+    padding:40px 24px; text-align:center;
+  }
+  header h1{margin:0 0 8px; font-size:28px}
+  header p{margin:0 auto; max-width:720px; opacity:.92; font-size:16px}
+  .wrap{max-width:1100px; margin:0 auto; padding:28px 20px 60px}
+  .how{
+    background:#fff; border:1px solid var(--line); border-radius:14px;
+    padding:18px 22px; margin:0 0 28px; color:var(--muted); font-size:15px;
+  }
+  .how b{color:var(--ink)}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:20px; margin:0 0 24px; box-shadow:0 1px 3px rgba(15,23,42,.06);
+  }
+  .card h2{margin:0 0 4px; font-size:19px}
+  .meta{color:var(--muted); font-size:13.5px; margin:0 0 16px}
+  .row{display:flex; gap:20px; align-items:center; flex-wrap:wrap}
+  .vid{flex:0 0 320px; max-width:100%}
+  .vid video{width:100%; max-height:380px; border-radius:12px; background:#000; display:block}
+  .plot{flex:1 1 420px; min-width:280px}
+  .plot img{width:100%; border-radius:10px; border:1px solid var(--line)}
+  .peaks{margin:14px 0 0; display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+  .peaks .lbl{color:var(--muted); font-size:13.5px; margin-right:2px}
+  .chip{
+    background:#fff1f4; color:var(--peak); border:1px solid #fecdd3;
+    border-radius:999px; padding:3px 11px; font-size:13px; font-weight:600;
+    font-variant-numeric:tabular-nums;
+  }
+  footer{text-align:center; color:var(--muted); font-size:13px; padding:24px}
+  code{background:#f1f5f9; padding:1px 6px; border-radius:6px; font-size:13px}
+  @media(max-width:640px){ .vid{flex-basis:100%} }
+</style>
+</head>
+<body>
+<header>
+  <h1>TRIBE v2 — del video a la actividad cerebral</h1>
+  <p>Cada ejemplo muestra un video y, al lado, la curva de <b>activación cerebral predicha</b> instante por instante.
+     Los puntos rojos son los <b>picos</b> (momentos de mayor respuesta). Reproduce el video y observa cómo coinciden.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="how">
+    <b>Cómo leerlo:</b> el eje X es el <b>tiempo del video (min:seg)</b>; el eje Y es cuánta actividad cortical
+    predice el modelo. Mira la <b>forma</b>, no el número: lo importante es <b>dónde sube</b>.
+    Por el retardo natural de la señal cerebral (~4–6&nbsp;s), la escena que dispara un pico suele estar
+    unos segundos <b>antes</b> del punto rojo.
+  </div>
+
+  <!-- Ejemplo 1 -->
+  <div class="card">
+    <h2>Ejemplo 1</h2>
+    <p class="meta">Duración 1:38 · horizontal · curva larga con clímax al final</p>
+    <div class="row">
+      <div class="vid"><video controls preload="metadata" src="1.mp4"></video></div>
+      <div class="plot"><img src="1.png" alt="Activación — ejemplo 1"></div>
+    </div>
+    <div class="peaks"><span class="lbl">Picos:</span>
+      <span class="chip">0:21</span><span class="chip">1:21</span><span class="chip">1:30</span><span class="chip">1:34</span>
+    </div>
+  </div>
+
+  <!-- Ejemplo 2 -->
+  <div class="card">
+    <h2>Ejemplo 2</h2>
+    <p class="meta">Duración 0:09 · vertical · clip corto</p>
+    <div class="row">
+      <div class="vid"><video controls preload="metadata" src="2.mp4"></video></div>
+      <div class="plot"><img src="2.png" alt="Activación — ejemplo 2"></div>
+    </div>
+    <div class="peaks"><span class="lbl">Picos:</span>
+      <span class="chip">0:01</span><span class="chip">0:05</span><span class="chip">0:09</span>
+    </div>
+  </div>
+
+  <!-- Ejemplo 3 -->
+  <div class="card">
+    <h2>Ejemplo 3</h2>
+    <p class="meta">Duración 0:11 · horizontal · clip corto</p>
+    <div class="row">
+      <div class="vid"><video controls preload="metadata" src="3.mp4"></video></div>
+      <div class="plot"><img src="3.png" alt="Activación — ejemplo 3"></div>
+    </div>
+    <div class="peaks"><span class="lbl">Picos:</span>
+      <span class="chip">0:01</span><span class="chip">0:05</span><span class="chip">0:09</span>
+    </div>
+  </div>
+
+  <!-- Ejemplo 4 -->
+  <div class="card">
+    <h2>Ejemplo 4</h2>
+    <p class="meta">Duración 1:07 · horizontal · actividad concentrada al inicio</p>
+    <div class="row">
+      <div class="vid"><video controls preload="metadata" src="4.mp4"></video></div>
+      <div class="plot"><img src="4.png" alt="Activación — ejemplo 4"></div>
+    </div>
+    <div class="peaks"><span class="lbl">Picos:</span>
+      <span class="chip">0:06</span><span class="chip">0:18</span><span class="chip">0:23</span><span class="chip">0:27</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Generado con el notebook <code>tribe_activation_colab.ipynb</code> · modelo TRIBE v2 (CC BY-NC)
+</footer>
+</body>
+</html>
