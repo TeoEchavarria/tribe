@@ -32,45 +32,37 @@ No necesitas instalar nada en tu computadora ni tener GPU: todo corre en **Googl
 Cada gráfica salió del notebook con el video de al lado. El eje X es el **tiempo del video (min:seg)**
 y los puntos rojos son los **picos** de activación.
 
-Reproduce cada video y observa cómo los **picos** de su gráfica coinciden con los momentos del video.
+Haz clic en la **gráfica** (o en el enlace ▶️) para reproducir el video en el visor de GitHub y observa
+cómo los **picos** coinciden con los momentos del video.
 
 ### Ejemplo 1 · 1:38 · picos 0:21, 1:21, 1:30, **1:34** (clímax al final)
 
-<table>
-<tr>
-<td width="38%"><video src="https://github.com/TeoEchavarria/tribe/raw/master/examples/1.mp4" controls muted width="100%"></video></td>
-<td width="62%"><img src="examples/1.png" alt="Activación — ejemplo 1" width="100%"></td>
-</tr>
-</table>
+[![Activación — ejemplo 1](examples/1.png)](https://github.com/TeoEchavarria/tribe/blob/master/examples/1.mp4)
+
+▶️ **[Reproducir video 1](https://github.com/TeoEchavarria/tribe/blob/master/examples/1.mp4)**
 
 ### Ejemplo 2 · 0:09 · picos 0:01, **0:05**, 0:09
 
-<table>
-<tr>
-<td width="30%"><video src="https://github.com/TeoEchavarria/tribe/raw/master/examples/2.mp4" controls muted width="100%"></video></td>
-<td width="70%"><img src="examples/2.png" alt="Activación — ejemplo 2" width="100%"></td>
-</tr>
-</table>
+[![Activación — ejemplo 2](examples/2.png)](https://github.com/TeoEchavarria/tribe/blob/master/examples/2.mp4)
+
+▶️ **[Reproducir video 2](https://github.com/TeoEchavarria/tribe/blob/master/examples/2.mp4)**
 
 ### Ejemplo 3 · 0:11 · picos 0:01, **0:05**, 0:09
 
-<table>
-<tr>
-<td width="38%"><video src="https://github.com/TeoEchavarria/tribe/raw/master/examples/3.mp4" controls muted width="100%"></video></td>
-<td width="62%"><img src="examples/3.png" alt="Activación — ejemplo 3" width="100%"></td>
-</tr>
-</table>
+[![Activación — ejemplo 3](examples/3.png)](https://github.com/TeoEchavarria/tribe/blob/master/examples/3.mp4)
+
+▶️ **[Reproducir video 3](https://github.com/TeoEchavarria/tribe/blob/master/examples/3.mp4)**
 
 ### Ejemplo 4 · 1:07 · picos **0:06**, 0:18, 0:23, 0:27 (actividad al inicio)
 
-<table>
-<tr>
-<td width="38%"><video src="https://github.com/TeoEchavarria/tribe/raw/master/examples/4.mp4" controls muted width="100%"></video></td>
-<td width="62%"><img src="examples/4.png" alt="Activación — ejemplo 4" width="100%"></td>
-</tr>
-</table>
+[![Activación — ejemplo 4](examples/4.png)](https://github.com/TeoEchavarria/tribe/blob/master/examples/4.mp4)
 
-> 💡 También tienes la galería en un solo archivo: [`examples/index.html`](examples/index.html) (ábrela en el navegador o publícala con GitHub Pages).
+▶️ **[Reproducir video 4](https://github.com/TeoEchavarria/tribe/blob/master/examples/4.mp4)**
+
+> 💡 **¿Los quieres reproducibles lado a lado (con audio)?** Activa **GitHub Pages**
+> (`Settings → Pages → Deploy from a branch → master /root`) y abre
+> **https://teoechavarria.github.io/tribe/examples/** — ahí los mismos videos de la nube **sí se reproducen inline**
+> ([`examples/index.html`](examples/index.html)).
 
 ---
 
